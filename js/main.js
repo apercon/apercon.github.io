@@ -16,17 +16,10 @@ $('.client-slider').bxSlider({
 	moveSlides: 2,
 	slideWidth: 130,
 	slideMargin: 25,
-	prevSelector: $('#client-prev'),
-	nextSelector: $('#client-next'),
-	prevText: '<i class="fa fa-angle-double-left"></i>',
-	nextText: '<i class="fa fa-angle-double-right"></i>'
 });
 
 $('.text-slider').bxSlider({
 	pager: false,
-	prevText: '<i class="fa fa-angle-left fa-3x"></i>',
-	nextText: '<i class="fa fa-angle-right fa-3x"></i>'
-	
 });
 
 //Efext on labels on contact form
@@ -97,27 +90,27 @@ function inviewAnimation() {
 		}
 
 	})
-	
+
 	$('.heading > h1').one('inview', function(event, visible){
 		$(this).addClass('animate fadeInRight');
 	});
-	
+
 	$('.heading > div').one('inview', function(event, visible){
 		$(this).addClass('animate fadeInLeft');
 	});
-	
+
 	$('.process-item').one('inview', function(event, visible){
 		$(this).addClass('animate fadeInLeft');
 	});
-	
+
 	$('.service-item').one('inview', function(event, visible){
 		$(this).addClass('animate');
 	})
-	
+
 	$('.adress-element').one('inview', function(event, visible){
 		$(this).addClass('animate fadeInUp');
 	})
-	
+
 	$('.about-item').one('inview', function(event, visible){
 		$(this).addClass('animate fadeInUp');
 	})
@@ -128,7 +121,7 @@ function filterPath(string) {
 }
 
 function singlePageNav() {
-	
+
 	var lastId,
         topMenu = $(".navbar"),
         topMenuHeight = topMenu.outerHeight(),
@@ -165,17 +158,17 @@ function singlePageNav() {
 			}
 		}
 	});
-	
+
 	// Bind to scroll
     $(window).scroll(function () {
 
-        //Display or hide scroll to top button 
+        //Display or hide scroll to top button
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
             $('.scrollup').fadeOut();
         }
-		
+
         // Get container scroll position
         var fromTop = $(this).scrollTop() + topMenuHeight + 10;
 
@@ -253,14 +246,14 @@ window.onload = function() {
 		$('.loader').remove();
 	}, 2000)
 
- 
+
 };
 //What happen on window resize
 $(window).resize(function () {
 	homeFullScreen();
 });
 
-//What happen on window scroll	
+//What happen on window scroll
 $(window).on("scroll", function (e) {
 	setTimeout(function () {
 		stickyMenu();
